@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body { 
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f7f7f7; 
+  overflow: hidden;
+}
+
+.container {
+  background-color: #fff;
+  width: 90%;
+  height: 100%;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 28px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 25px;
+  color: #1414af;
+}
+
+/* TASK INPUT */
+.task-input {
+  height: 45px;
+  position: relative;
+}
+.task-input input {
+  outline: none;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  padding: 0 20px 0 53px;
+  background-color: #e0ddddb4;
+  position: relative;
+}
+.task-input .fa {
+  position: absolute;
+  top: 50%;
+  transform: translate(17px, -50%);
+}
+.add-task-btn{
+  color: #fff;
+  position: absolute;
+  right: 0;
+  width: 20%;
+  background-color: #1414af;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.add-task-btn:hover{
+    background: rgb(5, 5, 236);
+}
+/* CONTROLS FOR ALL, PENDING, COMMPLETED &B CLEAR ALL BUTTON */
+.controls, li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.controls {
+  padding: 18px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.filters span {
+  cursor: pointer;
+  padding: 0.3rem;
+}
+.filters span:first-child{
+  margin-left: 0;
+}
+.filters span.active {
+  color: #1414af;;
+}
+.controls .clear-btn {
+  color: #fff;
+  background-color: #1414af;
+  padding: 7px 13px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+/* TASK BOX */
+.task-box {
+  height: 300px;
+  width: 95%;
+  overflow-y: auto;
+  margin: 20px 25px;
+}
+.task-box .task {
+  list-style-type: none;
+  margin-bottom: 18px;
+  padding: 16px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.task-box .task:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.task label {
+  display: flex;
+}
+.task label p.checked {
+  text-decoration: line-through;
+}
+.task label input {
+  margin-top: 2px;
+  margin-right: 12px;
+}
+/* TASK MENU FOR DELETE & EDIT OPTION */
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+
+.settings i{
+  padding-left: 8px;
+}
+
+.settings .task-menu {
+  position: absolute;
+  padding: 5px 0;
+  right: -5px;
+  z-index: 2;
+  bottom: -45px;
+  transform: scale(0);
+  transform-origin: top right;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.18);
+}
+
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 25px;
+  width: 120px;
+  font-size: 16px;
+  padding: 5px 15px;
+  list-style-type: none;
+  margin-bottom: 2px;
+  justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.task-menu li:hover {
+  background: #f5f5f5ab;
+}
+
+.task-menu li i {
+  padding-right: 8px;
+}
+
+/* MEDIA QUERy */
+
+ @media screen and (max-width: 568px){
+  .container{
+    margin: 10px auto;
+    padding: 10px;
+   }
+  .task-input input{
+    width:  65%;
+  }
+  .add-task-btn{
+    width: 30%
+  }
+ 
+}
+@media screen and (min-width: 768px){
+    .container{
+      width: 90%;
+      height: 100%;
+      margin: 20px auto;
+  }
+    body { 
+      background-color: #f7f7f7; 
+      overflow: hidden;
+      font-size: 20px;
+  }
+  h2 {
+    text-align: center;
+    padding: 20px 25px;
+    color: #1414af;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  .controls {
+    padding: 18px 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .filters span {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 20px;
+  }
+  .filters span:hover{
+    color:rgb(109, 109, 110);
+  }
+  .controls .clear-btn{
+    padding: 12px 30px;
+    font-size: 20px;
+  }
+  .controls .clear-btn:hover{
+    background: rgb(5, 5, 236);
+  }
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      ,
+      maximum-scale="1.0,"
+      user-scalable="no"
+    />
+    <title>My To-DO List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <!-- MAIN CONTAINER -->
+    <div class="container">
+      <div>
+        <h2>To-Do List</h2>
+      </div>
+      <div class="task-input">
+        <i class="fa fa-align-left" aria-hidden="true"></i>
+        <input type="text" placeholder="Add a new task" />
+        <button class="add-task-btn">Add Task</button>
+      </div>
+
+      <!-- CONTROLS  -->
+      <div class="controls">
+        <div class="filters">
+          <span id="all" class="active">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
